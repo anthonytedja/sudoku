@@ -2,14 +2,14 @@
 
 [![Grid](assets/board.png)](https://github.com/anthonytedja/sudoku)
 
-> sudoku is a AI-powered sudoku variant solver.
+> sudoku is an AI-powered sudoku variant solver.
 
 ## Introduction
 
 There are two parts to this project:
 
-- The implementation of two constraint propagators – a Forward Checking constraint propagator and a Generalized Arc Consistence (GAC) constraint propagator.
-- The encoding of three different CSP models to solve a logic puzzle that is a sudoku variant called FunPuzz, as described below. One model uses binary not-equal constraints for row and column constraints, while the other model uses n-ary all-different constraints for them. The third model encodes row, column and cage constraints (which are defined below).
+- `propagators.py` : The implementation of two constraint propagators – a Forward Checking constraint propagator and a Generalized Arc Consistence (GAC) constraint propagator. Also includes the implementation of the MRV heuristic for selecting variables to be assigned to code in this file.
+- `funpuzz_csp.py` : The encoding of three different CSP models to solve a logic puzzle that is a sudoku variant called FunPuzz, as described below. One model uses binary not-equal constraints for row and column constraints, while the other model uses n-ary all-different constraints for them. The third model encodes row, column and cage constraints (which are defined below).
 
 ## Funpuzz Formal Description
 
@@ -23,7 +23,7 @@ The Sudoku variation encoded is called FunPuzz and has the following formal desc
 
 ## Setup & Usage
 
-To run premade board tests, use the following commmand:
+To run premade board tests, use the following command:
 
 ```cpp
 python3 autograder.py
